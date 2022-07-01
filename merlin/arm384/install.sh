@@ -17,12 +17,12 @@ case $(uname -m) in
 		fi
 		;;
 	armv7l)
-		if [ "`uname -o|grep Merlin`" ] && [ -d "/koolshare" ] && ([ -n "`nvram get buildno|grep 384`" ] || [ -n "`nvram get buildno|grep 386`" ]);then
+		if [ "`uname -o|grep Merlin`" ] && [ -d "/koolshare" ];then
 			echo_date 固件平台【koolshare merlin armv7l 384】符合安装要求，开始安装插件！
 		else
-			echo_date 本插件适用于【koolshare merlin armv7l 384】固件平台，你的固件平台不能安装！！！
-			echo_date 退出安装！
-			exit 1
+			echo_date 已强制
+			echo_date 安装！
+#			exit 1
 		fi
 		;;
 	*)
